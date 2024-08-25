@@ -3,9 +3,12 @@
 import eight_puzzle
 from informed import a_star_graph_search
 from utils import print_solution
+from typing import Tuple
+from numbers import Number
 
+type State = Tuple[Tuple, int, int]
 
-def h1(s):
+def h1(s: State) -> Number:
     board, _, _ = s
     goal = (1, 2, 3, 4, 5, 6, 7, 8, 0)
     h_value = 0
